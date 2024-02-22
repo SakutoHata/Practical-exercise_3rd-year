@@ -1,0 +1,43 @@
+ベースラインにて、検索システムの自動作成をHyDEモデルとZero Shotモデルを用いて作成を試みたが、
+結果が芳しくなかった。
+その上、CNNモデルによるテキスト分類モデルを作成したが、質問内容の意味上理解まで至らなかった。
+これを受け、本モデルでは文書データの自動ベクトル化による近傍検索システムを実装した。
+本実装での独自性は、現状の近傍検索システムでは利用者の「質問」とデータベース上にある類似性の高い「情報」を
+探索するようになっているが、性能に限界がある為、今回はHyDEモデルに倣い、事前情報を与えずに
+想定質問を作成し、ユーザーの質問と近傍を測り、類似性の高い想定質問に紐づけられたデータベース上の
+「情報」を出力する仕組みのベースを作成した点である。
+本モデルでは、最終的なモデル評価を行うべく、想定質問に類似する質問を作成し、その正当性を測るべく
+事前に設定した期待値（ラベル）とシステムの判断が一致するかを正答率として計測した。
+
+0. 想定質問
+ ‐ database2embedding.ipynb
+   -> ベースラインに格納されている database.xlsx を元に、検索用の埋め込み層作成に用いるベクトルデータ
+      の付与を行った。
+
+ ‐ Question2Pre_Question.ipynb
+   -> database2embedding.ipynb で作成した、q_embedding_df.csv を元に比較検証に用いる、
+      質問文から想定質問を作成するコードのテストケースを実装した。
+      目的は、当システムが有用であるかの評価を行うことである。
+      また、想定質問のベクトルデータの付与も当方で行い、test_question_Q.csv を作成した。
+      -> Search_By_test_question_Q.ipynb にて運用テストを行った。
+
+ - Question&Info2Pre_Question.ipynb
+   -> Search_By_test_question_Q.ipynb にて有効性があると判断したため、本実装を行った。
+      database2embedding.ipynb で作成した、q_embedding_df.csv を元に比較検証に用いる、
+      質問文とデータベース上の情報から想定質問を作成するコードを実装した。
+      また、想定質問質問のベクトルデータの付与も当方で行い、test_question_QI.csv を作成した。
+
+ - user_question.ipynb
+   -> 最終モデルの検証用に、ユーザ質問の作成を当コードで行う。
+      また、ユーザ質問のベクトルデータの付与も当方で行い、user_question_af.csv を作成した。
+
+1. 文書検索
+ - Search_By_test_question_Q.ipynb
+   -> database2embedding.ipynb で作成した、q_embedding_df.csv と 
+      Question2Pre_Question.ipynb で作成した、test_question_Q.csv の比較により、精度検証を行った。
+      これにより、文書検索ロジックにて、情報に対する想定質問を用いることの有効性について判断した。
+
+ ‐ Search_By_test_question_QI.ipynb
+   -> Question&Info2Pre_Question.ipynb にて作成した、test_question_QI.csv を情報源とした、
+      user_question.ipynb にて作成した、user_question_af.csv に対する正答率を測った。
+
