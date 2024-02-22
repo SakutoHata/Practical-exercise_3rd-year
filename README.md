@@ -7,6 +7,11 @@
 >
 > here: https://github.com/SakutoHata/SIGNATE_defect-detection
 
+### ソフトウェアシステム開発
+> 当授業では、java言語を用いた教室予約システムをグループ開発しました。
+>
+> here: https://github.com/SakutoHata/Practical-exercise_3rd-year/tree/main/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA/%E6%95%99%E5%AE%A4%E4%BA%88%E7%B4%84%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0
+
 ### ソリューション開発Ⅰ
 > 当授業では、企業様から頂いた案件に対して課題解決をITソリューションにて行いました。
 >
