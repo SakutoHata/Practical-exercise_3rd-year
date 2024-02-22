@@ -1,3 +1,5 @@
+－ Practical-exercise_3rd-year
+
 3年生での実習成果を一部公開しました。
 
 〇人工知能応用
