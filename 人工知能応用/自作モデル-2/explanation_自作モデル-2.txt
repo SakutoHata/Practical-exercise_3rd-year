@@ -26,6 +26,7 @@
       database2embedding.ipynb で作成した、q_embedding_df.csv を元に比較検証に用いる、
       質問文とデータベース上の情報から想定質問を作成するコードを実装した。
       また、想定質問質問のベクトルデータの付与も当方で行い、test_question_QI.csv を作成した。
+      追記）test_question_QI.csvはサイズが大きすぎたため、zip形式で圧縮しています。
 
  - user_question.ipynb
    -> 最終モデルの検証用に、ユーザ質問の作成を当コードで行う。
