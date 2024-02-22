@@ -1,0 +1,12 @@
+実装を試みたが、理由があり完成に至らなかったものを格納している。
+
+・Question2Prediction（質問文から質問文の予測を行うモデル）
+-> BERTモデルをファインチューニングすることでテキスト分類を試みたが、RAM不足が発覚し見送った。
+   -> 使用を検討したモデル（Hugging Faceより）
+      - cl-tohoku/bert-base-japanese
+      - cl-tohoku/bert-base-japanese-char-whole-word-masking
+      - cl-tohoku/bert-base-japanese-v2
+      - cl-tohoku/bert-base-japanese-v3
+      - cl-tohoku/bert-large-japanese-char
+      - bert-base-multilingual-cased
+

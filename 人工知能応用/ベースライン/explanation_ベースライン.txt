@@ -1,0 +1,5 @@
+情報検索システム（RAG）の改善手法にHyDEモデル[1]というものがある。
+これにインスパイアされ、HyDEモデルの処理の前に「Zero Shotラーニングモデルによる分類タスクを行う」ことで
+ユーザの質問をジャンル毎に分類し、その分類に基づいた情報のみをHyDEモデルに渡すことで、生成結果を改善できないかと思い至り、本プログラムの実装を行った。
+
+※[1] Gao, Luyu, et al. "Precise zero-shot dense retrieval without relevance labels." arXiv preprint arXiv:2212.10496 (2022).
